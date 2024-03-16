@@ -135,19 +135,6 @@ body {
 .card__image-wrapper {
   position: relative;
 }
-@media (min-width: 25rem) {
-  .card__image-wrapper:hover, .card__image-wrapper:focus {
-    cursor: pointer;
-  }
-  .card__image-wrapper:hover .card__overlay, .card__image-wrapper:focus .card__overlay {
-    background-color: hsl(178, 100%, 50%);
-    opacity: 0.5;
-    display: block;
-  }
-  .card__image-wrapper:hover .card__icon, .card__image-wrapper:focus .card__icon {
-    display: block;
-  }
-}
 .card__image-wrapper .card__image {
   border-radius: 0.5rem;
 }
@@ -166,6 +153,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 25rem) {
+  .card__image-wrapper:hover .card__overlay, .card__image-wrapper:focus .card__overlay {
+    background: hsl(178, 100%, 50%);
+    opacity: 0.5;
+    display: block;
+  }
+  .card__image-wrapper:hover .card__icon, .card__image-wrapper:focus .card__icon {
+    display: block;
+  }
 }
 .card__title {
   margin-top: 1.5rem;
