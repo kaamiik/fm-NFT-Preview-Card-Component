@@ -1,0 +1,205 @@
+@use "variables" as *;
+@use "typography";
+@use "breakpoints" as *;
+@use "functions" as *;
+
+body {
+  background-color: $very-dark-blue-main-bg;
+  font-family: $font-stack;
+  font-size: $font-size-paragraph;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 rem(24);
+}
+
+.card {
+  margin-top: auto;
+  max-width: rem(327);
+  background-color: $very-dark-blue-card-bg;
+  border-radius: rem(15);
+  padding: rem(24);
+  display: grid;
+
+  @include breakpoint(medium) {
+    max-width: rem(350);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    @include breakpoint(medium) {
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        .card__overlay {
+          background-color: $cyan;
+          opacity: 0.5; // semi-transparent cyan
+          display: block;
+        }
+
+        .card__icon {
+          display: block;
+        }
+      }
+    }
+
+    .card__image {
+      border-radius: rem(8);
+    }
+
+    .card__overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: rem(8);
+    }
+
+    .card__icon {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    margin-top: rem(24);
+    color: $white;
+    font-weight: 600;
+    font-size: rem(22);
+    text-decoration: none;
+
+    @include breakpoint(medium) {
+      &:hover,
+      &:focus {
+        color: $cyan;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: rem(12);
+    color: $soft-blue;
+    font-weight: 300;
+    line-height: 1.44;
+
+    @include breakpoint(medium) {
+      margin-top: rem(16);
+    }
+  }
+
+  &__price-info {
+    margin-top: rem(16);
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(medium) {
+      margin-top: rem(24);
+    }
+  }
+}
+
+.price-info__item {
+  display: flex;
+  align-items: center;
+  gap: 6.5px;
+}
+
+.item__text {
+  color: $cyan;
+  font-size: rem(15);
+
+  @include breakpoint(medium) {
+    font-size: rem(16);
+  }
+}
+
+.price-info__remaining {
+  display: flex;
+  align-items: center;
+  gap: 6.5px;
+}
+
+.remaining__text {
+  color: $soft-blue;
+  font-size: rem(15);
+
+  @include breakpoint(medium) {
+    font-size: rem(16);
+  }
+}
+
+hr {
+  margin-top: rem(16);
+  border: none;
+  height: 1px;
+  background-color: $very-dark-blue-line;
+
+  @include breakpoint(medium) {
+    margin-top: rem(24);
+  }
+}
+
+.card__profile {
+  margin-top: rem(16);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: rem(16);
+
+  @include breakpoint(medium) {
+    margin-top: rem(22);
+  }
+}
+
+.profile__image {
+  width: 33px;
+  height: 33px;
+}
+
+.profile__text {
+  color: $soft-blue;
+  font-size: rem(15);
+
+  @include breakpoint(medium) {
+    font-size: rem(16);
+  }
+}
+
+.profile__text a {
+  font-style: normal;
+  color: $white;
+  text-decoration: none;
+
+  @include breakpoint(medium) {
+    &:hover,
+    &:focus {
+      color: $cyan;
+    }
+  }
+}
+
+/* Footer */
+.attribution {
+  margin-top: auto;
+  font-size: rem(11);
+  text-align: center;
+  background-color: $very-dark-blue-card-bg;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: rem(4);
+  padding: rem(4);
+  color: $white;
+}
+.attribution a {
+  color: $cyan;
+}

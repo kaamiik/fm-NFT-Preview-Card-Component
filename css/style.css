@@ -1,0 +1,304 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+hr {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.card {
+  margin-top: auto;
+  max-width: 20.4375rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 0.9375rem;
+  padding: 1.5rem;
+  display: grid;
+}
+@media (min-width: 25rem) {
+  .card {
+    max-width: 21.875rem;
+  }
+}
+.card__image-wrapper {
+  position: relative;
+}
+@media (min-width: 25rem) {
+  .card__image-wrapper:hover, .card__image-wrapper:focus {
+    cursor: pointer;
+  }
+  .card__image-wrapper:hover .card__overlay, .card__image-wrapper:focus .card__overlay {
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.5;
+    display: block;
+  }
+  .card__image-wrapper:hover .card__icon, .card__image-wrapper:focus .card__icon {
+    display: block;
+  }
+}
+.card__image-wrapper .card__image {
+  border-radius: 0.5rem;
+}
+.card__image-wrapper .card__overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+.card__image-wrapper .card__icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__title {
+  margin-top: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 1.375rem;
+  text-decoration: none;
+}
+@media (min-width: 25rem) {
+  .card__title:hover, .card__title:focus {
+    color: hsl(178, 100%, 50%);
+  }
+}
+.card__description {
+  margin-top: 0.75rem;
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  line-height: 1.44;
+}
+@media (min-width: 25rem) {
+  .card__description {
+    margin-top: 1rem;
+  }
+}
+.card__price-info {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 25rem) {
+  .card__price-info {
+    margin-top: 1.5rem;
+  }
+}
+
+.price-info__item {
+  display: flex;
+  align-items: center;
+  gap: 6.5px;
+}
+
+.item__text {
+  color: hsl(178, 100%, 50%);
+  font-size: 0.9375rem;
+}
+@media (min-width: 25rem) {
+  .item__text {
+    font-size: 1rem;
+  }
+}
+
+.price-info__remaining {
+  display: flex;
+  align-items: center;
+  gap: 6.5px;
+}
+
+.remaining__text {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.9375rem;
+}
+@media (min-width: 25rem) {
+  .remaining__text {
+    font-size: 1rem;
+  }
+}
+
+hr {
+  margin-top: 1rem;
+  border: none;
+  height: 1px;
+  background-color: hsl(215, 32%, 27%);
+}
+@media (min-width: 25rem) {
+  hr {
+    margin-top: 1.5rem;
+  }
+}
+
+.card__profile {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 25rem) {
+  .card__profile {
+    margin-top: 1.375rem;
+  }
+}
+
+.profile__image {
+  width: 33px;
+  height: 33px;
+}
+
+.profile__text {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.9375rem;
+}
+@media (min-width: 25rem) {
+  .profile__text {
+    font-size: 1rem;
+  }
+}
+
+.profile__text a {
+  font-style: normal;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+@media (min-width: 25rem) {
+  .profile__text a:hover, .profile__text a:focus {
+    color: hsl(178, 100%, 50%);
+  }
+}
+
+/* Footer */
+.attribution {
+  margin-top: auto;
+  font-size: 0.6875rem;
+  text-align: center;
+  background-color: hsl(216, 50%, 16%);
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(178, 100%, 50%);
+}
+
+/*# sourceMappingURL=style.css.map */

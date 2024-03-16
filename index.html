@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="card">
+        <a href="#">
+          <div class="card__image-wrapper">
+            <img
+              src="/images/image-equilibrium.jpg"
+              alt="3D geometric artwork titled 'Equilibrium #3429' featuring various colors against a dark blue background"
+              class="card__image"
+            />
+            <div class="card__overlay"></div>
+            <img src="images/icon-view.svg" alt="" class="card__icon" />
+          </div>
+        </a>
+        <a class="card__title" href="#">Equilibrium #3429</a>
+        <p class="card__description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="card__price-info">
+          <div class="price-info__item">
+            <img src="/images/icon-ethereum.svg" alt="" class="item__icon" />
+            <p class="item__text">0.041 ETH</p>
+          </div>
+          <div class="price-info__remaining">
+            <img src="/images/icon-clock.svg" alt="" class="remaining__icon" />
+            <p class="remaining__text">3 days left</p>
+          </div>
+        </div>
+        <hr />
+        <div class="card__profile">
+          <img
+            src="/images/image-avatar.png"
+            alt="Profile picture of Jules Wyvern represented as a shadow"
+            class="profile__image"
+          />
+          <p class="profile__text">Creation of <a href="#">Jules Wyvern</a></p>
+        </div>
+      </main>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/kaamiik">Kamran Kiani</a
+        >.
+      </footer>
+    </div>
+  </body>
+</html>
