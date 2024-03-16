@@ -154,7 +154,6 @@ hr {
   justify-content: flex-start;
   align-items: center;
   gap: rem(16);
-
   @include breakpoint(medium) {
     margin-top: rem(22);
   }
@@ -163,6 +162,8 @@ hr {
 .profile__image {
   width: 33px;
   height: 33px;
+  border: 1px solid $white;
+  border-radius: 50%;
 }
 
 .profile__text {

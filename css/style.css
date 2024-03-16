@@ -258,6 +258,8 @@ hr {
 .profile__image {
   width: 33px;
   height: 33px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
 }
 
 .profile__text {
